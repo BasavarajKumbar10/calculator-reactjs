@@ -1,0 +1,10 @@
+.Button {
+    flex: 1 0 21%; 
+    margin: 5px;
+    height: 40px;
+    background-color: #414141;
+    color: white;
+    font-size: calc(10px + 2vmin);
+    font-style: normal;
+}
+
