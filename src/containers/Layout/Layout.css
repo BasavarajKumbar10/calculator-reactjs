@@ -2,10 +2,12 @@
   background-color: #bcbcbc;
   min-height: 100vh;
   width: auto;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 20px 40px 20px 40px;
 }
+

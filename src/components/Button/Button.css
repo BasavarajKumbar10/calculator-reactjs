@@ -1,10 +1,19 @@
 .Button {
-    flex: 1 0 21%; 
-    margin: 5px;
+    flex: 1 0 20%;
     height: 40px;
+    font-size: inherit;
     background-color: #414141;
     color: white;
-    font-size: calc(10px + 2vmin);
+    margin: 2px;
     font-style: normal;
+    border-radius: 6px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.Button:hover,
+.Button:active {
+    background-color: #757575;
 }
 

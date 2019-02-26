@@ -5,12 +5,20 @@
     background: #efe5fd;
     background-clip: content-box; 
   box-shadow: inset 0 0 0 4px black; 
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .OutputText {
     text-align: right;
     text-justify: auto;
-    margin-right: 2%;
+    margin-right: 2vw;
     font-style: normal;
     color: black;
+}
+
+@media screen and (min-width: 576px) {
+  .Output {
+    width: 50vw;
+  }
 }
