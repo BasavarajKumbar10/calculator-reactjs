@@ -1,5 +1,5 @@
 # Calculator
-This a ReactJS project for implementing sample calculator app.
+This is a ReactJS project for implementing sample calculator app.
 
 ![Home](./screenshots/Screenshot1.jpg "Home")
 
