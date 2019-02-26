@@ -1,3 +1,8 @@
+# Calculator
+This a ReactJS project for implementing sample calculator app.
+
+![Home](./screenshots/Screenshot1.jpg "Home")
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
