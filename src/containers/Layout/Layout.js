@@ -8,9 +8,9 @@ const Output = lazy(() => import('../../components/Output/Output'));
 
 class Layout extends Component {
     state = {
-        output: 0,
-        x:0,
-        y:0,
+        output: '0',
+        x:'0',
+        y:'0',
         operation:null
     }
 
@@ -20,21 +20,21 @@ class Layout extends Component {
         if(val === 'C'){
             this.setState({
                 operation: null,
-                output: 0,
-                x:0,
-                y:0
+                output: '0',
+                x:'0',
+                y:'0'
             })
             return
         }
 
         if(val === '='){
-            if(this.state.x !== 0 && this.state.y !== 0){
+            if(this.state.x !== '0' && this.state.y !== '0'){
                 const output = doOps(this.state.x, this.state.y, this.state.operation);
                 this.setState({
                     operation: null,
                     output,
-                    x:output,
-                    y:0
+                    x:'0',
+                    y:'0'
                 })
             }
             
@@ -43,23 +43,25 @@ class Layout extends Component {
         
 
         if(isNaN(val)){
-            if(this.state.x !== 0 && this.state.y !== 0){
+            if(this.state.x !== '0' && this.state.y !== '0'){
                 const output = doOps(this.state.x, this.state.y, this.state.operation);
                 this.setState({
-                    operation: null,
+                    operation: val,
                     output,
                     x:output,
-                    y:0
+                    y:'0'
                 })
             }else{
-                this.setState({
-                    operation: val
+                this.setState(prevState => {
+                    return {operation: val,
+                             x: prevState.output
+                            }
                 })
             }
         }else{
             let value
             let isX 
-            if(this.state.output === 0 && !this.state.operation){
+            if(this.state.output === '0' && !this.state.operation){
                 value = parseInt(`${this.state.x}${val}`)
                 isX = true
             }else{
